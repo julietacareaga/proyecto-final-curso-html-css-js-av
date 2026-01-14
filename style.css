@@ -2,7 +2,7 @@ body{
     margin: 0;
 }
 
-.cabezera{
+.cabecera{
     background-image:url(./imagenes/fondo.jpg);
     background-attachment: fixed;
     background-size: 1600px;
@@ -41,14 +41,14 @@ h1{
     font-size: 60px; 
 }
 
-h1,.anclas,.contenido,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie{
+h1,.anclas,h2,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie,p{
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 383;
     font-style: normal;
 }
 
-.contenido{
+.contenido,h2{
     color: #2F3645;
     font-size: 50px;
     text-shadow: #ffffff 1px 1px,#808080 2px 2px;
@@ -112,4 +112,39 @@ h1,.anclas,.contenido,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie{
     display: flex;
     gap: 80px;
     text-align: center;
+}
+
+.cabeceraHistoria{
+    background-image: url(./imagenes/historia-programacion.jpg);
+    background-attachment: fixed;
+    background-size: 1600px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: space-around;
+}
+
+.tituloHistoria{
+    text-align: center;   
+}
+
+.contenedor1,.contenedor2,.contenedor3{
+    display: flex;
+    flex-direction: row;
+    padding: 150px 50px 0;
+    gap: 50px;
+    align-items: center;
+}
+
+.img1,.img2,.img3{
+    width: 700px;
+}
+
+div>h2{
+    font-weight: 500;
+}
+
+section>div>div>p{
+    color: #2F3645;
 }
