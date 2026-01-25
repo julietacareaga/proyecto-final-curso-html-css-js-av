@@ -6,20 +6,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,496;1,496&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Proyecto-Final</title>
     <link rel="shortcut icon" href="./imagenes/logo.png">
 </head>
 <body>
-    <header>
-        <div>
-            <a href="./historia.html">HISTORIA</a>
-            <a href="./juguemos.html">JUGUEMOS</a>
+    <div class="anclas">
+            <a href="./historia.html" class="historia">HISTORIA</a>
+            <a href="./juguemos.html" class="juguemos">JUGUEMOS</a>
+    </div>
+
+    <header class="cabeceraJuguemos">
+        <div class="tituloJuguemos">
+            <h1>JUGUEMOS UN POCO</h1>
         </div>
     </header>
 
-    <div>
-        <h1>JUGUEMOS</h1>
-    </div>
+    <main class="rompecabezas">
+        <h2>Armemos el rompecabezas y veamos que imagen es...</h2>
+
+        <section >
+             <div class="primerSeccion">
+                <img src="./imagenes/Rompe2.png" draggable="true" class="pieza" id="pieza1">
+                <div class="zonaDestino">
+                    <div class="zona" id="zona1">Arrastre y suelte la imágen aquí</div>
+                    <div class="zona" id="zona2">Arrastre y suelte la imágen aquí</div>
+                    <div class="zona" id="zona3">Arrastre y suelte la imágen aquí</div>
+                </div>
+                <img src="./imagenes/rompe3.png" draggable="true" class="pieza" id="pieza2">
+            </div>
+        </section>
+
+        <section class="segundaSeccion">
+            <div>
+                <img src="./imagenes/Rompe1.png" draggable="true" class="pieza" id="pieza3">
+            </div>
+            <button id="reiniciar">Reiniciar</button>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
 
 </body>

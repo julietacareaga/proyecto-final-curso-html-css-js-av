@@ -41,14 +41,14 @@ h1{
     font-size: 60px; 
 }
 
-h1,.anclas,h2,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie,p{
+h1,.anclas,h2,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie,p,#tituloVideo,.zona{
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 383;
     font-style: normal;
 }
 
-.contenido,h2{
+.contenido,h2,#tituloVideo{
     color: #2F3645;
     font-size: 50px;
     text-shadow: #ffffff 1px 1px,#808080 2px 2px;
@@ -147,4 +147,116 @@ div>h2{
 
 section>div>div>p{
     color: #2F3645;
+}
+
+#video{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contededorVideo{
+    display: flex;
+    flex-direction: column;
+    background-color: #2F3645;
+    padding: 5px 5px 50px 5px;
+    justify-content: center;
+    align-items: center;
+    width: 800px;  
+    margin-bottom: 100px;  
+}
+
+video{
+    width: 100%;    
+}
+
+#barra{
+    display: flex;
+    gap: 400px;
+    align-items: center;
+}
+
+#controles{
+    display: flex;
+    gap: 30px;
+}
+
+button{
+    padding: 10px 40px;
+    box-shadow: #808080 2px 2px;
+}
+
+button:active{
+    box-shadow: 0px 0px darkgray;
+    transform: translate(3px, 2px);
+}
+
+#tiempo{
+    color: white;
+}
+
+.cabeceraJuguemos{
+    background-image: url(./imagenes/img2.jpg);
+    background-attachment: fixed;
+    background-size: 1600px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 400px;
+}
+
+.rompecabezas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.pieza{
+    width: 180px;
+}
+
+.zona{
+    width: 200px;
+    height: 350px;
+    display: flex;
+    border: 2px solid black;
+    background-color: grey;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 10px;
+}
+
+#pieza1{
+    transform: rotate(8deg);
+}
+#pieza2{
+    transform: rotate(-10deg);
+}
+
+#pieza3{
+    transform: rotate(93deg);
+}
+.zona:hover{
+    background-color: #1d1d1d;
+    
+}
+
+#zona1,#zona2,#zona3{
+    
+}
+
+.primerSeccion{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.zonaDestino{
+    display: flex;
+    gap: 50px;
 }
