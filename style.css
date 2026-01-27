@@ -81,6 +81,16 @@ h1,.anclas,h2,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie,p,#tituloVideo,.zona{
 
 }
 
+
+
+.tarjeta1{
+    animation: cambioPosicion1 7s;
+}
+
+.tarjeta2{
+    animation: cambioPosicion2 6s;
+}
+
 .tarjeta1>p,.tarjeta2>p{
     font-size: 15px;
     text-align: center;
@@ -135,10 +145,15 @@ h1,.anclas,h2,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie,p,#tituloVideo,.zona{
     padding: 150px 50px 0;
     gap: 50px;
     align-items: center;
+    perspective: 800px;
+    perspective-origin: top;
 }
+
+
 
 .img1,.img2,.img3{
     width: 700px;
+    transform: translate3d(45px 50px 90px);
 }
 
 div>h2{
@@ -260,3 +275,37 @@ button:active{
     display: flex;
     gap: 50px;
 }
+
+@keyframes cambioPosicion1 {
+    from{
+        transform: translateX(-900px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: none;
+    }
+}
+
+@keyframes cambioPosicion2 {
+    from{
+        transform: translateX(900px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: none;
+    }
+}
+
+/*@keyframes animacionContenedor1Y2 {
+    from{
+        transform:  translate3d(500px) translateX(500px) ;
+        visibility:visible
+    }
+
+  to{
+        transform: translateZ(0px);
+        visibility:visible
+    }
+}*/
