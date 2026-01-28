@@ -61,7 +61,7 @@ h1,.anclas,h2,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie,p,#tituloVideo,.zona{
     font-size: 50px;
     text-shadow: #ffffff 1px 1px,#808080 2px 2px;
     text-align: center;
-    padding: 20px;
+    
 }
 
 .seccionPrincipal{
@@ -144,10 +144,11 @@ h1,.anclas,h2,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie,p,#tituloVideo,.zona{
 }
 
 .tituloHistoria{
-    text-align: center;   
+    text-align: center;
+    padding: 20px;   
 }
 
-.contenedor1,.contenedor2,.contenedor3{
+.contenedor{
     display: flex;
     flex-direction: row;
     padding: 150px 50px 0;
@@ -157,11 +158,12 @@ h1,.anclas,h2,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie,p,#tituloVideo,.zona{
     perspective-origin: top;
 }
 
+.img{
+    width: 600px;   
+}
 
-
-.img1,.img2,.img3{
-    width: 700px;
-    transform: translate3d(45px 50px 90px);
+#imagen1,#imagen3{
+    animation: aparecer1 3s ease-out;
 }
 
 div>h2{
@@ -284,7 +286,7 @@ button:active{
     gap: 50px;
 }
 
-@keyframes cambioPosicion1 {
+@keyframes cambioPosicion1 { /*contenedor historia*/
     from{
         transform: translateX(-900px);
         opacity: 0;
@@ -295,7 +297,7 @@ button:active{
     }
 }
 
-@keyframes cambioPosicion2 {
+@keyframes cambioPosicion2 { /*contenedor juego*/
     from{
         transform: translateX(900px);
         opacity: 0;
@@ -306,9 +308,9 @@ button:active{
     }
 }
 
-/*@keyframes animacionContenedor1Y2 {
+@keyframes aparecer1 { /*imagen 1 y 3*/
     from{
-        transform:  translate3d(500px) translateX(500px) ;
+        transform:  translateZ(500px) translateX(-500px);
         visibility:visible
     }
 
@@ -316,4 +318,4 @@ button:active{
         transform: translateZ(0px);
         visibility:visible
     }
-}*/
+}    
