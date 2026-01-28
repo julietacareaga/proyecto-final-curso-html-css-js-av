@@ -2,7 +2,7 @@ body{
     margin: 0;
 }
 
-.cabecera{
+.tituloProgramacion{
     background-image:url(./imagenes/fondo.jpg);
     background-attachment: fixed;
     background-size: 1600px;
@@ -12,15 +12,23 @@ body{
     text-align: center;
 }
 
-.anclas{
+.cabecera{
+    
     display: flex;
     font-size: 25px;
-    justify-content: flex-end;
-    padding: 40px;
-    gap: 20px;
+    justify-content: space-between;
+    padding-top: 20px;
+    align-items: center;
     position: sticky;
     z-index: 1;
     top: 0;
+    background-color: transparent;
+}
+
+.anclas{
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
 }
 
 .historia,.juguemos{
