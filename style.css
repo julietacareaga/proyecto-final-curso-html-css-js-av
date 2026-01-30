@@ -2,27 +2,29 @@ body{
     margin: 0;
 }
 
-.tituloProgramacion{
+.cabeceraProgramacion{
     background-image:url(./imagenes/fondo.jpg);
     background-attachment: fixed;
-    background-size: 1600px;
+    background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
+    height: 500px;
 }
 
 .cabecera{
-    
     display: flex;
     font-size: 25px;
     justify-content: space-between;
     padding-top: 20px;
     align-items: center;
-    position: sticky;
-    z-index: 1;
+    position: fixed;
+    z-index: 2;
     top: 0;
     background-color: transparent;
+    width: 100%;
 }
 
 .anclas{
@@ -38,7 +40,7 @@ body{
 }
 
 .tituloPrincipal{
-    padding: 300px 300px;
+    padding-top: 0px;
     display: flex;
     justify-content: center;
 }
@@ -89,8 +91,6 @@ h1,.anclas,h2,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie,p,#tituloVideo,.zona{
 
 }
 
-
-
 .tarjeta1{
     animation: cambioPosicion1 7s;
 }
@@ -135,12 +135,12 @@ h1,.anclas,h2,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie,p,#tituloVideo,.zona{
 .cabeceraHistoria{
     background-image: url(./imagenes/historia-programacion.jpg);
     background-attachment: fixed;
-    background-size: 1600px;
+    background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     height: 500px;
-    justify-content: space-around;
+    justify-content: center;   
 }
 
 .tituloHistoria{
@@ -223,12 +223,14 @@ button:active{
 .cabeceraJuguemos{
     background-image: url(./imagenes/img2.jpg);
     background-attachment: fixed;
-    background-size: 1600px;
+    background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 400px;
+    height: 500px;
+    justify-content: center;
+    width: 100%;
 }
 
 .rompecabezas{
