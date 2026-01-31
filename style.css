@@ -1,3 +1,9 @@
+*{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 383;
+    font-style: normal;
+}
 body{
     margin: 0;
 }
@@ -11,9 +17,66 @@ body{
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    height: 500px;
+    height: 700px;
 }
 
+.logo1{
+    animation: logo-1 ease-in 3s; 
+}
+
+@keyframes logo-1{
+    0%{
+    transform: translate(0,-10px);
+    opacity:0;}
+    20%{
+    transform: translate(0,-10px);
+    opacity:0;}
+    50%{
+    transform: translate(0,0px);
+    opacity:1;}
+    80%{
+    transform: translate(0,0);
+    opacity:1;}
+    100%{
+    transform: translate(0,0);
+    opacity:1;}
+}   
+
+.logo2{
+    animation: logo-2 ease-in 3s;
+}
+@keyframes logo-2 {
+    0%{
+    transform: translate(0,-10px);
+    opacity:0;}
+    30%{
+    transform: translate(0,-10px);
+    opacity:0;}
+    60%{
+    transform: translate(0,0);
+    opacity:1;}
+    90%{
+    transform: translate(0,0);
+    opacity:1;}
+    100%{
+    transform:translate(0,0);
+    opacity:1;}
+    }
+
+.logo3{
+   animation: logo-3 ease 2s;
+   animation-delay: 2s;
+   animation-fill-mode: forwards;
+}
+ @keyframes logo-3 {
+    from{
+        stroke: transparent;
+    }
+    to{
+        stroke: green;
+    }
+    
+}    
 .cabecera{
     display: flex;
     font-size: 25px;
@@ -25,6 +88,12 @@ body{
     top: 0;
     background-color: transparent;
     width: 100%;
+    transition: background-color 2s ease; 
+    
+}
+
+.fondoCabecera{
+    background-color: #ffffff;   
 }
 
 .anclas{
@@ -33,10 +102,22 @@ body{
     padding-right: 20px;
 }
 
-.historia,.juguemos{
+.ancla{
     text-decoration-line: none;
-    text-shadow: #ffffff 1px 1px,#808080 2px 2px;
+    color: white;
+    text-shadow: #808080 2px 2px,#000000 3px 3px;
+    transition: color 2s ease;
+}
+
+.ancla:hover{
+    text-shadow: none;
+    transform: translate(4px, 3px);
+}
+
+.colorAnclas{
     color: #2F3645;
+    text-shadow: #ffffff 1px 1px,#808080 2px 2px; 
+    font-weight: 500;
 }
 
 .tituloPrincipal{
@@ -51,19 +132,11 @@ h1{
     font-size: 60px; 
 }
 
-h1,.anclas,h2,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie,p,#tituloVideo,.zona{
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 383;
-    font-style: normal;
-}
-
 .contenido,h2,#tituloVideo{
     color: #2F3645;
     font-size: 50px;
     text-shadow: #ffffff 1px 1px,#808080 2px 2px;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 .seccionPrincipal{
@@ -88,21 +161,47 @@ h1,.anclas,h2,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie,p,#tituloVideo,.zona{
     flex-direction: column;
     gap: 40px;
     align-items: center;
-
+    visibility: hidden;
 }
 
-.tarjeta1{
-    animation: cambioPosicion1 7s;
+.animacionTarjeta1{
+    animation: cambioPosicion1 ease-out 6s;
+    animation-fill-mode: forwards;
 }
 
-.tarjeta2{
-    animation: cambioPosicion2 6s;
+.animacionTarjeta2{
+    animation: cambioPosicion2 ease-out 5s;
+    animation-fill-mode: forwards;
 }
 
 .tarjeta1>p,.tarjeta2>p{
     font-size: 15px;
     text-align: center;
     align-items: flex-start;
+}
+
+@keyframes cambioPosicion1 { /*contenedor historia*/
+    from{
+        transform: translateX(-900px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: none;
+        visibility: visible;
+    }
+}
+
+@keyframes cambioPosicion2 { /*contenedor juego*/
+    from{
+        transform: translateX(900px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: none;
+        visibility: visible;
+    }
 }
 
 .boton1,.boton2{
@@ -156,6 +255,7 @@ h1,.anclas,h2,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie,p,#tituloVideo,.zona{
     align-items: center;
     perspective: 800px;
     perspective-origin: top;
+    visibility: hidden;
 }
 
 .img{
@@ -163,7 +263,37 @@ h1,.anclas,h2,.tarjeta1>p,.tarjeta2>p,.boton1,.boton2,.pie,p,#tituloVideo,.zona{
 }
 
 #imagen1,#imagen3{
-    animation: aparecer1 3s ease-out;
+    animation: animacionImagen1 4s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacionImagen1 { /*imagen 1 y 3*/
+    from{
+        transform:  translateZ(500px) translateX(-500px);
+        visibility:visible
+    }
+
+  to{
+        transform: translateZ(0px);
+        visibility:visible
+    }
+}    
+
+#imagen2{
+    animation: animacionImagen2 4s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacionImagen2 {
+    from{
+        transform:  translateZ(500px) translateX(500px) ;
+        visibility:visible
+    }
+
+  to{
+        transform: translateZ(0px);
+        visibility:visible
+    }
 }
 
 div>h2{
@@ -272,10 +402,6 @@ button:active{
     
 }
 
-#zona1,#zona2,#zona3{
-    
-}
-
 .primerSeccion{
     display: flex;
     flex-direction: row;
@@ -288,36 +414,5 @@ button:active{
     gap: 50px;
 }
 
-@keyframes cambioPosicion1 { /*contenedor historia*/
-    from{
-        transform: translateX(-900px);
-        opacity: 0;
-    }
-    to{
-        transform: translateX(0px);
-        opacity: none;
-    }
-}
 
-@keyframes cambioPosicion2 { /*contenedor juego*/
-    from{
-        transform: translateX(900px);
-        opacity: 0;
-    }
-    to{
-        transform: translateX(0px);
-        opacity: none;
-    }
-}
 
-@keyframes aparecer1 { /*imagen 1 y 3*/
-    from{
-        transform:  translateZ(500px) translateX(-500px);
-        visibility:visible
-    }
-
-  to{
-        transform: translateZ(0px);
-        visibility:visible
-    }
-}    
