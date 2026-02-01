@@ -367,22 +367,16 @@ video{
 
 #controles{
     display: flex;
+    flex-direction: row;
     gap: 30px;
 }
 
-button{
+#play,#pausa{
     padding: 10px 40px;
     box-shadow: #808080 2px 2px;
-    display: flex;
-    margin: auto;
-    padding: 10px 100px;
-    color: #ffffff;
-    text-transform: uppercase;
-    border: none;
-    background-color: #2F3645;
-    font-weight: 200;
-    opacity: 0;
 }
+
+
 
 button:active{
     box-shadow: 0px 0px darkgray;
@@ -463,10 +457,18 @@ button:active{
 }
 
 #reiniciar {
-    margin: 20px auto;
+    margin: 20px 50px;
     display: block;
     padding: 10px 20px;
+    box-shadow: #808080 2px 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    background-color: #2F3645;
+    font-weight: 200;
+    opacity: 0;
 }
+
 
 /*-----------clases para modificar---------------*/
 /*union piezas*/
