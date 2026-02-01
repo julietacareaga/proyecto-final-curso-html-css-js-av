@@ -45,7 +45,7 @@ body{
 .logo2{
     animation: logo-2 ease-in 3s;
 }
-@keyframes logo-2 {
+@keyframes logo-2{
     0%{
     transform: translate(0,-10px);
     opacity:0;}
@@ -68,7 +68,7 @@ body{
    animation-delay: 2s;
    animation-fill-mode: forwards;
 }
- @keyframes logo-3 {
+ @keyframes logo-3{
     from{
         stroke: transparent;
     }
@@ -84,7 +84,7 @@ body{
     padding-top: 20px;
     align-items: center;
     position: fixed;
-    z-index: 2;
+    z-index: 999;
     top: 0;
     background-color: transparent;
     width: 100%;
@@ -180,7 +180,7 @@ h1{
     align-items: flex-start;
 }
 
-@keyframes cambioPosicion1 { /*contenedor historia*/
+@keyframes cambioPosicion1{ /*contenedor historia*/
     from{
         transform: translateX(-900px);
         opacity: 0;
@@ -192,7 +192,7 @@ h1{
     }
 }
 
-@keyframes cambioPosicion2 { /*contenedor juego*/
+@keyframes cambioPosicion2{ /*contenedor juego*/
     from{
         transform: translateX(900px);
         opacity: 0;
@@ -255,44 +255,78 @@ h1{
     align-items: center;
     perspective: 800px;
     perspective-origin: top;
-    visibility: hidden;
 }
 
 .img{
-    width: 600px;   
+    width: 600px;
+    visibility: hidden;   
 }
 
-#imagen1,#imagen3{
-    animation: animacionImagen1 4s ease-out;
+.texto1,.texto2,.texto3{
+    visibility: hidden;
+}
+
+.animacionImagenes1{
+    animation: animacionImagen1 1s ease-out;
     animation-fill-mode: forwards;
 }
 
-@keyframes animacionImagen1 { /*imagen 1 y 3*/
+@keyframes animacionImagen1{ /*imagen 1 y 3*/
     from{
-        transform:  translateZ(500px) translateX(-500px);
+        transform: translateZ(500px) translateX(-500px);
         visibility:visible
     }
-
   to{
         transform: translateZ(0px);
         visibility:visible
     }
 }    
 
-#imagen2{
-    animation: animacionImagen2 4s ease-out;
+.animacionImagenes2{
+    animation: animacionImagen2 1s ease-out;
     animation-fill-mode: forwards;
 }
 
-@keyframes animacionImagen2 {
+@keyframes animacionImagen2{
     from{
-        transform:  translateZ(500px) translateX(500px) ;
+        transform: translateZ(500px) translateX(500px);
         visibility:visible
     }
-
   to{
         transform: translateZ(0px);
         visibility:visible
+    }
+}
+
+.animacionTexto1{
+    animation: animacionTexto1 2s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacionTexto1{
+    from{
+        transform: translateZ(-500px) translateX(500px) rotateY(-45deg);
+        visibility:visible
+    }
+  to{
+    transform: translateZ(0px);
+    visibility:visible
+    }
+}
+
+.animacionTexto2{
+    animation: animacionTexto2 2s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacionTexto2{ 
+    from{
+        transform: translateZ(-500px) translateX(-500px) rotateY(45deg);
+        visibility:visible
+    }
+  to{
+    transform: translateZ(0px);
+    visibility:visible
     }
 }
 
@@ -339,6 +373,14 @@ video{
 button{
     padding: 10px 40px;
     box-shadow: #808080 2px 2px;
+    display: flex;
+    margin: auto;
+    padding: 10px 100px;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    background-color: #2F3645;
+    font-weight: 200;
 }
 
 button:active{
@@ -368,38 +410,49 @@ button:active{
     flex-direction: column;
     align-items: center;
     padding-top: 100px;
-}
-
-.pieza{
-    width: 180px;
+    text-align: center;
+    perspective: 800px;
 }
 
 .zona{
     width: 200px;
-    height: 350px;
+    height: 300px;
     display: flex;
     border: 2px solid black;
     background-color: grey;
+    padding: 10px;
     text-align: center;
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    padding: 10px;
+    }
+
+.zonaDestino{
+    display: flex;
+    gap: 20px;
+}
+
+.pieza{
+    width: 180px;
+    transition: transform 0.3s;
 }
 
 #pieza1{
     transform: rotate(8deg);
+    position: sticky;
+    z-index: 1;
 }
 #pieza2{
     transform: rotate(-10deg);
+
 }
 
 #pieza3{
     transform: rotate(93deg);
 }
+
 .zona:hover{
-    background-color: #1d1d1d;
-    
+    background-color: #1d1d1d;       
 }
 
 .primerSeccion{
@@ -407,12 +460,56 @@ button:active{
     flex-direction: row;
     gap: 50px;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.zonaDestino{
-    display: flex;
-    gap: 50px;
+.zona img {
+    width: 100%;
+    height: 100%;
 }
 
+#reiniciar {
+    margin: 20px auto;
+    display: block;
+    padding: 10px 20px;
+    position: relative;
+    top: -120px;
+}
 
+/*-----------clases para modificar---------------*/
+/* Unión de piezas */
+.zonaDestino.unir {
+    gap: 0 !important;
+    transform: scale(1.1);
+    transition: all 1.5s ease-in-out;
+}
+.zonaDestino.unir .zona { border: 0; padding: 0; }
 
+/* Ocultar secciones para el final */
+.ocultar {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
+}
+
+/* Animación del H2 bajando */
+.mensaje-final-animado {
+    animation: feliz 3s forwards;
+    z-index: 100;
+}
+
+@keyframes feliz {
+    0% { transform: translateY(0) translateZ(0); }
+    50% { transform: translateY(250px) translateZ(200px) scale(1.2); }
+    100% { transform: translateY(150px) translateZ(0px) scale(1.3); }
+}
+
+#reiniciar {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#reiniciar.visible {
+    opacity: 1;
+}

@@ -42,7 +42,7 @@
             </div>
         </nav>
     
-        <div class="tituloJuguemos">
+        <div class="tituloJuguemos" >
             <h1>JUGUEMOS UN POCO</h1>
         </div>
     </header>
@@ -50,27 +50,25 @@
 
     <main class="rompecabezas">
         <h2>Armemos el rompecabezas y veamos que imagen es...</h2>
-
-        <section >
-             <div class="primerSeccion">
-                <img src="./imagenes/Rompe2.png" draggable="true" class="pieza" id="pieza1">
+    
+        <section class="juego">
+            <div class="primerSeccion">
+                <img src="./imagenes/Rompe2.png" class="pieza" id="pieza1" draggable="true">
                 <div class="zonaDestino">
-                    <div class="zona" id="zona1">Arrastre y suelte la imágen aquí</div>
-                    <div class="zona" id="zona2">Arrastre y suelte la imágen aquí</div>
-                    <div class="zona" id="zona3">Arrastre y suelte la imágen aquí</div>
+                    <div class="zona" id="zona1"><p>Arrastre y suelte la imágene aquí</p></div>
+                    <div class="zona" id="zona2"><p>Arrastre y suelte la imágene aquí</p></div>
+                    <div class="zona" id="zona3"><p>Arrastre y suelte la imágene aquí</p></div>
                 </div>
-                <img src="./imagenes/rompe3.png" draggable="true" class="pieza" id="pieza2">
+                <img src="./imagenes/rompe3.png" class="pieza" id="pieza2" draggable="true">
             </div>
         </section>
 
         <section class="segundaSeccion">
-            <div>
-                <img src="./imagenes/Rompe1.png" draggable="true" class="pieza" id="pieza3">
-            </div>
-            <button id="reiniciar">Reiniciar</button>
+            <img src="./imagenes/Rompe1.png" class="pieza" id="pieza3" draggable="true">
         </section>
+    
+        <button id="reiniciar">Reiniciar Juego</button>
     </main>
-
-    <script src="./script.js"></script>
+    <script src="./juguemos.js"></script>
 
 </body>
