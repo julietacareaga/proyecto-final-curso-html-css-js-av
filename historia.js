@@ -46,9 +46,9 @@ let pasarATiempo=(tiempo)=>{
 }
 
 setTimeout(()=>{
-    tiempoVideo.textContent =
+    tiempoVideo.textContent=
         textoBase+" "+
-        pasarATiempo(video.currentTime) +
+        pasarATiempo(video.currentTime)+
         " / " +
         pasarATiempo(video.duration)
 },500)
