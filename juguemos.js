@@ -49,7 +49,7 @@ function soltar(e){
     }else{
         contenedor=e.target
     }
-    // si la zona esta vacia, ponemos la imagen
+    // se pone la imagen
     if(contenedor.classList.contains('zona') && !contenedor.querySelector("img")){
         contenedor.innerHTML='<img src="'+imagenOriginal.src+'" style="width:100%; height:100%;">'
         contenedor.setAttribute("data-id",id)
